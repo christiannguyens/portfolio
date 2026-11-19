@@ -4,7 +4,7 @@
  *
  * Setup (production):
  *   1. Vercel dashboard → Storage → Create a *Blob* store (public access) and
- *      connect it to this project (adds BLOB_READ_WRITE_TOKEN).
+ *      connect it to this project (adds BLOB_STORE_ID).
  *   2. Add an env var WALL_ADMIN_SECRET (any long random string).
  * Locally, polaroids are stored in ./.wall-data instead.
  *

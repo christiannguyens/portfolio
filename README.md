@@ -54,7 +54,7 @@ A guest wall: visitors take a photo (or upload one), sign it by drawing or typin
   - *Phone push:* install the ntfy app, subscribe to a hard-to-guess topic, and set `WALL_NOTIFY_WEBHOOK=https://ntfy.sh/<your-topic>`. A Discord or Slack webhook URL works here too.
 - **Locally**, polaroids are saved in `./.wall-data` (gitignored), and the admin secret lives in `.env.local`.
 - **On Vercel** you need two things (until then the page shows "The booth opens soon"):
-  1. Storage → Create **Blob** store (public access) → connect it to this project. This adds `BLOB_READ_WRITE_TOKEN`.
+  1. Storage → Create **Blob** store (public access) → connect it to this project. This adds `BLOB_STORE_ID`.
   2. Settings → Environment Variables → add `WALL_ADMIN_SECRET` (any long random string), then redeploy.
 - Your own pinned polaroids and their handwritten notes are in `src/data/wall.ts`.
 

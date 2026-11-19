@@ -1,6 +1,7 @@
 /**
- * Wall storage. Uses Vercel Blob when BLOB_READ_WRITE_TOKEN is set,
- * otherwise a local folder (./.wall-data) for development.
+ * Wall storage. Uses Vercel Blob when a store is connected, either via
+ * BLOB_STORE_ID (+ Vercel's automatic OIDC credentials) or the older
+ * BLOB_READ_WRITE_TOKEN; otherwise a local folder (./.wall-data) for dev.
  */
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -9,7 +10,7 @@ import { del, list, put, rename } from "@vercel/blob";
 export type WallStatus = "pending" | "approved";
 export type WallEntry = { id: string; key: string; url: string; createdAt: string; status: WallStatus; visitor?: string };
 
-const useBlob = Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+const useBlob = Boolean(process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID);
 /** On Vercel without Blob configured, there is nowhere to write. */
 export const storageReady = useBlob || !process.env.VERCEL;
 
