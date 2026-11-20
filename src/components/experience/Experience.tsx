@@ -37,7 +37,7 @@ export function Experience() {
         label="Experience"
         id="experience-title"
         note={`${startYear}–${endYear}`}
-        title="Internships, tutoring, and the work in between."
+        title="Where I've worked."
       />
 
       {/* ruler */}

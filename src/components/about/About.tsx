@@ -1,4 +1,4 @@
-import { aboutParagraphs, currentlyExploring, facts } from "@/data/about";
+import { aboutParagraphs, currentlyExploring, offTheClock } from "@/data/about";
 import { leadership } from "@/data/experience";
 import { parseYM } from "@/lib/utils";
 import { Reveal } from "../ui/Reveal";
@@ -13,8 +13,8 @@ export function About() {
         index="01"
         label="About"
         id="about-title"
-        note="Half engineering, half business"
-        title="Learning how software gets built, and the business around it."
+        note="Charlotte → St. Louis"
+        title="A little more about me."
       />
 
       <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
@@ -35,10 +35,11 @@ export function About() {
           ))}
         </div>
 
-        {/* facts */}
+        {/* off the clock */}
         <Reveal className="lg:col-span-4 lg:col-start-9" delay={0.1}>
+          <h3 className="label mb-3">Off the clock</h3>
           <dl className="border-t border-line">
-            {facts.map((f) => (
+            {offTheClock.map((f) => (
               <div key={f.k} className="grid grid-cols-[7.5rem_1fr] gap-4 border-b border-line py-3.5">
                 <dt className="label text-dim">{f.k}</dt>
                 <dd className="text-[14px] leading-snug">{f.v}</dd>

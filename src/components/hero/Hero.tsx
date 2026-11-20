@@ -65,9 +65,8 @@ export function Hero({ children }: { children?: React.ReactNode }) {
           </h1>
 
           <motion.p {...rise(0.75)} className="mt-7 max-w-[34rem] text-[17px] leading-relaxed text-muted text-pretty">
-            I&apos;m a first-year in WashU&apos;s joint Business + Computer Science program. Most of what I know
-            I&apos;ve learned by building it: a native macOS dashboard, a campus lending marketplace, and a
-            group-buying platform from a hackathon.
+            Most of what I know I picked up by building things: a macOS dashboard, a campus lending
+            marketplace, and a group-buying app from a hackathon.
           </motion.p>
 
           <motion.div {...rise(0.9)} className="mt-9 flex flex-wrap items-center gap-3">

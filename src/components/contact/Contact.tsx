@@ -53,7 +53,7 @@ export function Contact() {
           id="contact-title"
           className="mt-12 max-w-5xl text-[clamp(2.6rem,6.4vw,5.6rem)] font-medium leading-[0.96] tracking-[-0.05em] text-balance"
         >
-          Have something interesting in mind?
+          Say hi.
         </h2>
       </Reveal>
 
@@ -61,8 +61,8 @@ export function Contact() {
         <div className="lg:col-span-5">
           <Reveal delay={0.08}>
             <p className="max-w-[28rem] text-[16px] leading-relaxed text-muted text-pretty">
-              I&apos;m happy to talk about a project, an idea that needs building, a team that could use another
-              set of hands, or a tool you think I should try. Reach out any way you like.
+              If you want to work on something together, have a question, or just want to talk, email me or
+              message me on LinkedIn.
             </p>
           </Reveal>
         </div>

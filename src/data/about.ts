@@ -4,24 +4,23 @@
  */
 
 export const aboutParagraphs = [
-  "I'm in WashU's joint Business + Computer Science program, which is a fancy way of saying I spend half my week on how things are built and the other half on why anyone would want them. The interesting stuff usually happens where those two questions meet.",
-  "I learn best by making something real. PortableDash pulled me into native macOS development. Campus Borrow had to hold up through a two-minute pitch. Pool had to come together before the hackathon clock ran out. Each one made me learn whatever the project needed next.",
+  "I'm from Charlotte, North Carolina, and moved to St. Louis for school. I like making things that are actually useful, and I learn best by just building them.",
   "Right now I'm most interested in software engineering, product management, fintech, edtech, AI, systems, and web development.",
+  "When I'm not working on something, I'm usually with my girlfriend, my close friends, or my family.",
 ];
 
-export const facts = [
-  { k: "Based in", v: "St. Louis, MO & Charlotte, NC" },
-  { k: "Studying", v: "Business + CS (BUCS)" },
-  { k: "School", v: "WashU, Class of 2030" },
-  { k: "Honors", v: "Taylor Scholar" },
-  { k: "Builds", v: "macOS apps, web apps, hackathon things" },
+/** "Off the clock" list next to the About copy. */
+export const offTheClock = [
+  { k: "Gym", v: "Lifting, sometimes running" },
+  { k: "Games", v: "League of Legends, TFT" },
+  { k: "Also", v: "Walks, eating, doomscrolling" },
 ];
 
 /** Edit freely: this is the "now" list. */
 export const currentlyExploring = [
-  { label: "Native macOS development", note: "Swift, AppKit and WebKit, via PortableDash" },
-  { label: "Building with AI coding tools", note: "Claude Code" },
-  { label: "Where product meets business", note: "Pitch competitions, hackathons, BUCS" },
+  { label: "Native macOS apps", note: "Swift, AppKit, WebKit" },
+  { label: "Building with AI tools", note: "mostly Claude Code" },
+  { label: "Product and startups", note: "pitch comps, hackathons" },
 ];
 
 /**

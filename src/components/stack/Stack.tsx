@@ -26,7 +26,7 @@ export function Stack() {
         label="Stack"
         id="stack-title"
         note="Used, not mastered"
-        title="The languages, frameworks, and tools I work with."
+        title="What I build with."
       />
 
       <div className="grid gap-10 lg:grid-cols-12">
