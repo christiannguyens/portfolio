@@ -27,11 +27,12 @@ export const currentlyExploring = [
  * OUTSIDE THE KEYBOARD
  * Replace each placeholder with a real photo + caption:
  *   { title: "Film photography", caption: "Shot on ...", image: "/images/interests/film.jpg" }
- * Images go in /public/images/interests/. Polaroids crop square; use `position` to adjust the crop.
+ * Images go in /public/images/interests/. The file name becomes the caption (dashes -> spaces).
+ * Polaroids crop square; use `position` to adjust the crop.
  * Entries without `image` render as blank "coming soon" polaroids.
  */
 export type Interest = {
-  /** Short label on the polaroid (leave empty to show just the number). */
+  /** Label on the polaroid. Defaults to the image file name ("hike.jpg" -> "hike"). */
   title?: string;
   /** Optional sentence under the polaroid. */
   caption?: string;

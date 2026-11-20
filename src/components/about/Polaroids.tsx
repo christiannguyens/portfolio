@@ -5,6 +5,9 @@ import { isDev } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { Reveal } from "../ui/Reveal";
 
+/** "/images/interests/late-night-walk.jpg" -> "late night walk" */
+const captionFrom = (src: string) => src.split("/").pop()!.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ");
+
 const TILTS = ["-rotate-[2.5deg]", "rotate-[1.5deg]", "-rotate-[1deg]", "rotate-[2.5deg]", "-rotate-[1.5deg]"];
 
 export function Polaroids() {
@@ -51,7 +54,7 @@ export function Polaroids() {
               </div>
               <figcaption className="flex min-h-12 items-center justify-between px-1 py-3 text-ink">
                 <span className="font-serif text-[17px] italic leading-tight">
-                  {item.title ?? ""}
+                  {item.title ?? (item.image ? captionFrom(item.image) : "")}
                 </span>
                 <span className="font-mono text-[9px] text-ink/50">{String(i + 1).padStart(2, "0")}</span>
               </figcaption>
