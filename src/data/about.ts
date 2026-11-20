@@ -41,8 +41,13 @@ export type Interest = {
   position?: string;
 };
 
-/** Empty entries show as blank "coming soon" polaroids. */
-export const interests: Interest[] = [{}, {}, {}, {}];
+/** Empty entries ({}) show as blank "coming soon" polaroids. */
+export const interests: Interest[] = [
+  { image: "/images/interests/gym.jpg", alt: "A dumbbell rack at the gym", position: "50% 65%" },
+  { image: "/images/interests/friends.jpg", alt: "A group of friends posing outside at night", position: "50% 50%" },
+  { image: "/images/interests/cars.jpg", alt: "Two white cars parked in a driveway at dusk", position: "50% 58%" },
+  { image: "/images/interests/hike.jpg", alt: "Christian looking out over the trees from a rocky overlook", position: "50% 42%" },
+];
 
 /** Short interest tags shown under the photos. Leave empty to hide. */
 export const interestTags: string[] = [];
