@@ -27,12 +27,12 @@ export const currentlyExploring = [
  * OUTSIDE THE KEYBOARD
  * Replace each placeholder with a real photo + caption:
  *   { title: "Film photography", caption: "Shot on ...", image: "/images/interests/film.jpg" }
- * Images go in /public/images/interests/. The file name becomes the caption (dashes -> spaces).
+ * Images go in /public/images/interests/. The file name (minus .jpg) is used as the caption, exactly as written.
  * Polaroids crop square; use `position` to adjust the crop.
  * Entries without `image` render as blank "coming soon" polaroids.
  */
 export type Interest = {
-  /** Label on the polaroid. Defaults to the image file name ("hike.jpg" -> "hike"). */
+  /** Label on the polaroid. Defaults to the image file name, exactly ("i love hiking.jpg" -> "i love hiking"). */
   title?: string;
   /** Optional sentence under the polaroid. */
   caption?: string;
@@ -44,10 +44,10 @@ export type Interest = {
 
 /** Empty entries ({}) show as blank "coming soon" polaroids. */
 export const interests: Interest[] = [
-  { image: "/images/interests/gym.jpg", alt: "A dumbbell rack at the gym", position: "50% 65%" },
-  { image: "/images/interests/friends.jpg", alt: "A group of friends posing outside at night", position: "50% 50%" },
-  { image: "/images/interests/cars.jpg", alt: "Two white cars parked in a driveway at dusk", position: "50% 58%" },
-  { image: "/images/interests/hike.jpg", alt: "Christian looking out over the trees from a rocky overlook", position: "50% 42%" },
+  { image: "/images/interests/lifting is my favorite hobby.jpg", alt: "The dumbbell rack at my gym", position: "50% 65%" },
+  { image: "/images/interests/me, my girlfriend, and my friends.jpg", alt: "Me, my girlfriend, and my friends out at night", position: "50% 50%" },
+  { image: "/images/interests/my car and my dad's car.jpg", alt: "My car and my dad's car parked in a driveway at dusk", position: "50% 58%" },
+  { image: "/images/interests/i love hiking.jpg", alt: "Me looking out over the trees from a rocky overlook", position: "50% 42%" },
 ];
 
 /** Short interest tags shown under the photos. Leave empty to hide. */

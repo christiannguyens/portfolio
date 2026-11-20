@@ -1,12 +1,15 @@
 import { Camera } from "lucide-react";
+import { Caveat } from "next/font/google";
 import Image from "next/image";
 import { interests, interestTags } from "@/data/about";
 import { isDev } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { Reveal } from "../ui/Reveal";
 
-/** "/images/interests/late-night-walk.jpg" -> "late night walk" */
-const captionFrom = (src: string) => src.split("/").pop()!.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ");
+const hand = Caveat({ subsets: ["latin"], weight: ["500"], display: "swap" });
+
+/** "/images/interests/i love hiking.jpg" -> "i love hiking" (exactly as named) */
+const captionFrom = (src: string) => src.split("/").pop()!.replace(/\.[^.]+$/, "");
 
 const TILTS = ["-rotate-[2.5deg]", "rotate-[1.5deg]", "-rotate-[1deg]", "rotate-[2.5deg]", "-rotate-[1.5deg]"];
 
@@ -25,7 +28,7 @@ export function Polaroids() {
               <div className="relative aspect-square overflow-hidden bg-ink-3">
                 {item.image ? (
                   <Image
-                    src={item.image}
+                    src={encodeURI(item.image)}
                     alt={item.alt ?? item.caption ?? item.title ?? ""}
                     fill
                     sizes="(min-width: 768px) 22vw, 45vw"
@@ -52,11 +55,13 @@ export function Polaroids() {
                   </div>
                 )}
               </div>
-              <figcaption className="flex min-h-12 items-center justify-between px-1 py-3 text-ink">
-                <span className="font-serif text-[17px] italic leading-tight">
+              <figcaption className="flex min-h-[3.75rem] items-end justify-between gap-3 px-1.5 pb-2.5 pt-2">
+                <span
+                  className={cn(hand.className, "-rotate-[1deg] text-[clamp(17px,1.75vw,22px)] leading-[1.05] text-[#26241f]")}
+                >
                   {item.title ?? (item.image ? captionFrom(item.image) : "")}
                 </span>
-                <span className="font-mono text-[9px] text-ink/50">{String(i + 1).padStart(2, "0")}</span>
+                <span className="shrink-0 pb-1 font-mono text-[9px] text-ink/40">{String(i + 1).padStart(2, "0")}</span>
               </figcaption>
             </figure>
             {item.caption && <p className="mt-4 text-[13px] leading-snug text-muted">{item.caption}</p>}
