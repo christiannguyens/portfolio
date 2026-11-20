@@ -177,6 +177,13 @@ export function WallClient({ fonts, handFont }: { fonts: WallFont[]; handFont: s
         </div>
       </header>
 
+      {!loading && items.length === 0 && (
+        <div className="mt-14 flex flex-col items-center gap-4 border border-dashed border-line py-20 text-center">
+          <PixelGlyph rows={ICONS.star} size={3} className="text-accent/60" />
+          <p className="text-[15px] text-muted">Nothing up yet. Be the first one.</p>
+        </div>
+      )}
+
       <ul className="mt-14 grid grid-cols-2 gap-x-5 gap-y-12 sm:grid-cols-3 sm:gap-x-7 lg:grid-cols-4 xl:grid-cols-5">
         {items.map((item, i) => {
           const r = hash(item.id);

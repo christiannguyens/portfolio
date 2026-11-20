@@ -31,10 +31,10 @@ export const wallConfig = {
   rateLimit: 4,
 };
 
-/** Christian's own polaroids, pinned as the first ones on the wall. */
-export const foundingPolaroids = [
-  { src: "/images/interests/photo-01.jpg", alt: "Christian with friends, dressed up at night", position: "50% 35%", note: "christian" },
-  { src: "/images/interests/photo-03.jpg", alt: "Christian with friends at WashU", position: "50% 40%", note: "washu ✿" },
-  { src: "/images/interests/photo-02.jpg", alt: "Christian and friends in a dorm room", position: "50% 30%", note: "dorm night" },
-  { src: "/images/interests/photo-04.jpg", alt: "An upside-down selfie", position: "50% 50%", note: "upside down" },
-];
+export type FoundingPolaroid = { src: string; alt: string; position: string; note: string };
+
+/**
+ * Christian's own polaroids, pinned as the first ones on the wall. Empty for now.
+ * Example: { src: "/images/wall/me.jpg", alt: "...", position: "50% 40%", note: "hi" }
+ */
+export const foundingPolaroids: FoundingPolaroid[] = [];

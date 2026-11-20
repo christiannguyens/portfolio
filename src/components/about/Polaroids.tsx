@@ -40,7 +40,7 @@ export function Polaroids() {
                       }}
                     />
                     <Camera size={18} strokeWidth={1.5} className="relative" />
-                    <span className="relative font-mono text-[10px] uppercase tracking-[0.14em]">developing</span>
+                    <span className="relative font-mono text-[10px] uppercase tracking-[0.14em]">coming soon</span>
                     {isDev && (
                       <span className="absolute inset-x-2 bottom-2 text-center font-mono text-[9px] leading-tight text-accent/70">
                         add image in data/about.ts
@@ -51,7 +51,7 @@ export function Polaroids() {
               </div>
               <figcaption className="flex min-h-12 items-center justify-between px-1 py-3 text-ink">
                 <span className="font-serif text-[17px] italic leading-tight">
-                  {item.image ? (item.title ?? "") : "soon"}
+                  {item.title ?? ""}
                 </span>
                 <span className="font-mono text-[9px] text-ink/50">{String(i + 1).padStart(2, "0")}</span>
               </figcaption>

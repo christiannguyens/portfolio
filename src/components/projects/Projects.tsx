@@ -159,7 +159,7 @@ export function Projects() {
         label="Work"
         id="work-title"
         note={`${projects.length} projects`}
-        title="Stuff I've built."
+        title="Side projects and competitions."
       />
       {featured.map((p) => (
         <Featured key={p.slug} project={p} />

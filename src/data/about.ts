@@ -28,7 +28,7 @@ export const currentlyExploring = [
  * Replace each placeholder with a real photo + caption:
  *   { title: "Film photography", caption: "Shot on ...", image: "/images/interests/film.jpg" }
  * Images go in /public/images/interests/. Polaroids crop square; use `position` to adjust the crop.
- * Entries without `image` render as "developing" polaroids.
+ * Entries without `image` render as blank "coming soon" polaroids.
  */
 export type Interest = {
   /** Short label on the polaroid (leave empty to show just the number). */
@@ -41,12 +41,8 @@ export type Interest = {
   position?: string;
 };
 
-export const interests: Interest[] = [
-  { image: "/images/interests/photo-01.jpg", alt: "Christian with friends, dressed up at night", position: "50% 35%" },
-  { image: "/images/interests/photo-02.jpg", alt: "Christian and friends posing in a dorm room", position: "50% 30%" },
-  { image: "/images/interests/photo-03.jpg", alt: "Christian with friends at WashU", position: "50% 40%" },
-  { image: "/images/interests/photo-04.jpg", alt: "An upside-down selfie with a friend", position: "50% 50%" },
-];
+/** Empty entries show as blank "coming soon" polaroids. */
+export const interests: Interest[] = [{}, {}, {}, {}];
 
 /** Short interest tags shown under the photos. Leave empty to hide. */
 export const interestTags: string[] = [];
